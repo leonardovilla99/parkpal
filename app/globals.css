@@ -3,9 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background: #04162F;
+  --loginBox:#112D54;
+  --almostWhite: #D9D9D9;
+  --grey: #a9a6a6;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,11 +18,55 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    background: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loginBox{
+    width: 400px;
+    height: 515px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border-radius: 50px;
+    background: var(--loginBox);
+    box-shadow: 0px 20px 20px 20px rgba(0, 0, 0, 0.10);
+}
+.loginInside{
+    width: 220px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.logoLogin{
+    width: 90px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+.buttonLogin{
+    width: 220px;
+    height: 50px;
+    border-radius: 50px;
+    margin-top: 30px !important;
+    background: var(--almostWhite);
+    color: var(--loginBox);
+}
+.buttonLogin:hover{
+    background-color: var(--background);
+    color: var(--almostWhite);
+}
+.textLogin{
+    color: var(--grey);
+    font-size:x-small;
+    margin-top: 10px;
+    text-align: center;
+}
+.textLogin a{
+    text-decoration: underline;
+    color: var(--almostWhite);
 }
