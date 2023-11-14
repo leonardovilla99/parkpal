@@ -26,12 +26,12 @@ export default function RootLayout(){
     }else{
         return(
             <body className={inter.className}>
-                <BrowserRouter>
+                {/* <BrowserRouter>
                     <Routes>
                         <Route path="/" element={<Login />} />
                         <Route path="/register" element={<Register/>} />
                     </Routes>
-                </BrowserRouter>
+                </BrowserRouter> */}
             </body>
         )
     }
