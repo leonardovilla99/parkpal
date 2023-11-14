@@ -17,7 +17,7 @@ import Map from '@/components/Map'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function RootLayout(){
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [isLoggedIn, setIsLoggedIn] = useState(true);
     useEffect(() => {
         //document.title = 'ParkPal';
     }, []);
@@ -25,14 +25,16 @@ export default function RootLayout(){
         return (<Map></Map>)
     }else{
         return(
+        <html lang="en">
             <body className={inter.className}>
-                {/* <BrowserRouter>
+                <BrowserRouter>
                     <Routes>
                         <Route path="/" element={<Login />} />
-                        <Route path="/register" element={<Register/>} />
+                        {/* <Route path="/register" element={<Register/>} /> */}
                     </Routes>
-                </BrowserRouter> */}
+                </BrowserRouter>
             </body>
+        </html>
         )
     }
 }

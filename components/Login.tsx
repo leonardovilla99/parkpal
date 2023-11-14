@@ -1,6 +1,5 @@
 // Package
 import * as React from "react";
-import Box from '@mui/material/Box';
 import { Button } from "@mui/material";
 import { Link } from 'react-router-dom';
 
@@ -11,7 +10,7 @@ export default function Login(){
     return(
         <div className="loginBox">
             <div className="loginInside">
-                <img src={"./logo.png"} alt="Logo" className="logoLogin"/>
+                {/* <img src={"./logo.png"} alt="Logo" className="logoLogin"/> */}
                 <TextFields name="Email"/>
                 <TextFields name="Password"/>
                 <Button variant="contained" className="buttonLogin">Login</Button>

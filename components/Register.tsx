@@ -11,7 +11,7 @@ export default function Register(){
     return(
         <div className="loginBox">
             <div className="loginInside">
-                <img src={"./logo.png"} alt="Logo" className="logoLogin"/>
+                {/* <img src={"./logo.png"} alt="Logo" className="logoLogin"/> */}
                 <TextFields name="Email"/>
                 <TextFields name="Password"/>
                 <TextFields name="Confirm password"/>
