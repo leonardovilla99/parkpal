@@ -19,7 +19,7 @@ const inter = Inter({ subsets: ['latin'] })
 export default function RootLayout(){
     const [isLoggedIn, setIsLoggedIn] = useState(true);
     useEffect(() => {
-        document.title = 'ParkPal';
+        //document.title = 'ParkPal';
     }, []);
     if(isLoggedIn) {
         return (<Map></Map>)
