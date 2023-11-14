@@ -29,8 +29,8 @@ export default function RootLayout(){
             <body className={inter.className}>
                 <BrowserRouter>
                     <Routes>
-                        <Route path="/" element={<Login />} />
-                        {/* <Route path="/register" element={<Register/>} /> */}
+                        {/* <Route path="/" element={<Login />} /> */}
+                        <Route path="/register" element={<Register/>} />
                     </Routes>
                 </BrowserRouter>
             </body>
