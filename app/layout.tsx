@@ -17,7 +17,7 @@ import Map from '@/components/Map'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function RootLayout(){
-    const [isLoggedIn, setIsLoggedIn] = useState(true);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
     useEffect(() => {
         //document.title = 'ParkPal';
     }, []);
