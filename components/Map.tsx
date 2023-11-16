@@ -1,12 +1,18 @@
 // Package
-import * as React from "react"
+import React,{useState} from "react"
 import { Button } from "@mui/material"
 import { Link } from 'react-router-dom'
 
+// Component
 import supabase from "@/supabase"
+import Popup from "@/components/Popup"
 
 
 export default function Map(){
+    const [popup,setPopup] = useState(-1)
+    const [popOpen,setPopOpen] = useState(false)
+
+    let availableSpot = [32,65,43,65,2,76]
 
     const onAuthStateChange =async () => {
         try {
@@ -17,14 +23,26 @@ export default function Map(){
             window.location.reload();
         }
     }
+
+    const handleButtonClick = (value: React.SetStateAction<number>) => {
+        // Use the 'value' parameter to update state or perform other actions
+        setPopup(value);
+        setPopOpen(true)
+    }
+
     return(
         <div className="map">
-            <div className="pin" id="uno"><p>1</p></div>
-            <div className="pin" id="dos"><p>2</p></div>
-            <div className="pin" id="tres"><p>3</p></div>
-            <div className="pin" id="qu"><p>4</p></div>
-            <div className="pin" id="cin"><p>5</p></div>
-            <div className="pin" id="sei"><p>6</p></div>
+            <Popup trigger={popOpen} setTrigger={setPopOpen}>
+                <h1>PG{popup}</h1>
+                <p>Available spot: {availableSpot[popup-1]}</p>
+                <button>Request swap</button>
+            </Popup>
+            <button className="pin" id="uno" onClick={()=> {handleButtonClick(1)}}><p>1</p></button>
+            <button className="pin" id="dos" onClick={()=> {handleButtonClick(2)}}><p>2</p></button>
+            <button className="pin" id="tres" onClick={()=> {handleButtonClick(3)}}><p>3</p></button>
+            <button className="pin" id="qu" onClick={()=> {handleButtonClick(4)}}><p>4</p></button>
+            <button className="pin" id="cin" onClick={()=> {handleButtonClick(5)}}><p>5</p></button>
+            <button className="pin" id="sei" onClick={()=> {handleButtonClick(6)}}><p>6</p></button>
             <div className="mapBox">
                 <div className="parkingTitle">
                     <h2>FREE PARKING SPOT</h2>
