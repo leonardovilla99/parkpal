@@ -100,7 +100,7 @@ export default function Map(){
                     <div className="numberParking"><p>{availableSpot[5]}</p></div>
                 </div>
             </div>
-            <button onClick={onAuthStateChange}>Logout</button>
+            <button onClick={onAuthStateChange} className="logout">Logout</button>
         </div>
     )
 }
