@@ -19,6 +19,10 @@
 
 body {
     background: var(--background);
+    justify-content: center;
+    align-items: center;
+}
+.blockInside{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,6 +77,103 @@ body {
 .map{
     width: 100%;
     height: 100%;
-    background-image: url("../public/map.jpg");
-    background-size: contain;
+    position: absolute;
+    background: url("../public/map.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+.mapBox{
+    height: 90%;
+    width: 400px;
+    position: absolute;
+    top: 5%;
+    left: 30px;
+    border-radius: 50px;
+    background: var(--loginBox);
+    box-shadow: 0px 20px 20px 20px rgba(0, 0, 0, 0.10);
+}
+.parkingTitle{
+    background-color: var(--almostWhite);
+    width: 90%;
+    height: 70px;
+    border-radius: 50px;
+    margin: 5%;
+}
+.parkingTitle h2{
+    text-align: center;
+    position: relative;
+    top: 30%;
+    font-weight:900;
+    color: var(--loginBox);
+}
+.parkingContainer{
+    display: flex;
+    height: fit-content;
+    padding: 0 5% 15px 5%;
+    margin: 0 5%;
+    border-color: var(--almostWhite);
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    margin-top:20px;
+}
+.parkingText{
+    width: 70%;
+}
+.parkingText h3{
+    font-size: 30px;
+    font-weight: 900;
+    color: var(--almostWhite);
+}
+.parkingText p{
+    color: var(--grey);
+}
+.numberParking{
+    width: 30%;
+    background-color: var(--almostWhite);
+    border-radius: 50px;
+    text-align: center;
+    
+}
+.numberParking p{
+    color: var(--loginBox);
+    position: relative;
+    top: 30%;
+    font-weight: 700;
+}
+#lastContainer{
+    border: none;
+}
+.pin{
+    width: 40px;
+    height: 40px;
+    background-color: var(--loginBox);
+    border-radius: 50%;
+    position: relative;
+    text-align: center;
+    padding-top: 8px;
+    color: var(--almostWhite);
+    font-weight: 500;
+}
+#uno{
+    left: 74%;
+    top: 40%;
+}
+#dos{
+    left: 73%;
+    top: 43%;
+}
+#tres{
+    left: 30%;
+    top: 23%;
+}
+#qu{
+    left: 67%;
+    top: -2%;
+}
+#cin{
+    left: 75%;
+    top: -5%;
+}
+#sei{
+    left: 60%;
+    top: -10%;
 }

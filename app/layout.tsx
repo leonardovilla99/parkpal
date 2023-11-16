@@ -17,12 +17,26 @@ import Map from '@/components/Map'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function RootLayout(){
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
-    // useEffect(() => {
-    //     //document.title = 'ParkPal';
-    // }, []);
+
+    const [isLoggedIn, setIsLoggedIn] = useState(true);
+
+    useEffect(() => {
+        document.title = 'ParkPal';
+    }, []);
+
+
     if(isLoggedIn) {
-        return (<Map></Map>)
+        return (
+            <html lang="en">
+                <body className={inter.className}>
+                    <BrowserRouter>
+                        <Routes>
+                            <Route path="/" element={<Map></Map>} />
+                        </Routes>
+                    </BrowserRouter>
+                </body>
+            </html>
+        )
     }else{
         return(
         <html lang="en">
