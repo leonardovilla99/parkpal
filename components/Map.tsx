@@ -3,16 +3,28 @@ import * as React from "react"
 import { Button } from "@mui/material"
 import { Link } from 'react-router-dom'
 
+import supabase from "@/supabase"
+
 
 export default function Map(){
+
+    const onAuthStateChange =async () => {
+        try {
+            let { error } = await supabase.auth.signOut()
+        } catch (error) {
+            console.log(error)
+        }finally{
+            window.location.reload();
+        }
+    }
     return(
         <div className="map">
-            <div className="pin" id="uno"><>1</></div>
-            <div className="pin" id="dos"><>2</></div>
-            <div className="pin" id="tres"><>3</></div>
-            <div className="pin" id="qu"><>4</></div>
-            <div className="pin" id="cin"><>5</></div>
-            <div className="pin" id="sei"><>6</></div>
+            <div className="pin" id="uno"><p>1</p></div>
+            <div className="pin" id="dos"><p>2</p></div>
+            <div className="pin" id="tres"><p>3</p></div>
+            <div className="pin" id="qu"><p>4</p></div>
+            <div className="pin" id="cin"><p>5</p></div>
+            <div className="pin" id="sei"><p>6</p></div>
             <div className="mapBox">
                 <div className="parkingTitle">
                     <h2>FREE PARKING SPOT</h2>
@@ -60,6 +72,7 @@ export default function Map(){
                     <div className="numberParking"><p>76</p></div>
                 </div>
             </div>
+            <button onClick={onAuthStateChange}>Logout</button>
         </div>
     )
 }

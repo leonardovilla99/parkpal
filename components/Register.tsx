@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom'
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import axios from 'axios';
 
-const API_URL = 'http://localhost:3001';
+// Component
+import supabase from "../supabase"
 
 const theme = createTheme({
     palette: {
@@ -21,28 +21,39 @@ const theme = createTheme({
     },
 });
 
-
 export default function Register(){
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [error, setErr] = useState('')
     const [confPassword, setconfPassword] = useState('');
-    const [token, setToken] = useState('');
+    const [loading, setLoading] = useState(false);
+    const [success, setSuccess] = useState(false);
 
-    // error
-    const [error, setErr] = useState('');
-
-    const handleRegister = async () => {
+    const register = async () => {
         if(password == confPassword){
             try {
-                await axios.post(`${API_URL}/register`, { email, password });
-                setErr("User registered successfully");
-              } catch (error) {
-                setErr("Registration failed");
-              }
-        }else{
-            setErr("Insert the same password")
+                setLoading(true)
+                let { data, error } = await supabase.auth.signUp({
+                    email: email,
+                    password: password
+                })
+                if (error) {
+                    setErr('Error during signup: ' + error.message);
+                } else {
+                    setErr('Signed up successfully, please check your email');
+                }
+            }catch(error){
+                if (error instanceof Error) {
+                    setErr("Registration failed: " + error.message)
+                }
+            }finally{
+                setLoading(false)
+            }
         }
-    };
+        else{
+            setErr("Insert the same password")
+        } 
+    }
 
     return(
         <div className="blockInside">
@@ -109,10 +120,9 @@ export default function Register(){
                             />
                         </Box>
                     </ThemeProvider>
-                    <Button variant="contained" className="buttonLogin" onClick={handleRegister}>Register</Button>
+                    <Button variant="contained" className="buttonLogin" onClick={register}>Register</Button>
                     <p className="textLogin">If you have an account you can <br/><Link to="/">login here</Link></p>
-                    {error}
-                    {token && <div>Token: {token}</div>}
+                    <div className="error">{ error }</div>
                 </div>
             </div>
         </div>
