@@ -96,7 +96,7 @@ body {
     left: 30px;
     border-radius: 50px;
     background: var(--loginBox);
-    box-shadow: 0px 20px 20px 20px rgba(0, 0, 0, 0.10);
+    box-shadow: 0px 20px 20px 20px rgba(0, 0, 0, 0.50);
 }
 .parkingTitle{
     background-color: var(--almostWhite);
@@ -161,9 +161,14 @@ body {
     padding-top: 8px;
     color: var(--almostWhite);
     font-weight: 500;
+    box-shadow: 0px 2px 2px 3px rgba(0, 0, 0, 0.20);
 }
 .pin p{
     transform: rotate(45deg);
+    margin-left: -4px;
+    margin-top: -6px;
+    margin-right: -4px;
+
 }
 .popupExt {
     width: 100%;
@@ -171,6 +176,17 @@ body {
     background: rgba(0, 0, 0, 0.50);
     position: fixed;
     z-index: 99;
+}
+.closeB{
+    position: absolute;
+    display: block;
+    justify-content: center;
+    top: 65%;
+    transform: translateY(-50%);
+    left: 50%;
+    width: 300px;
+    color: var(--almostWhite);
+    text-decoration: underline;
 }
 .popup {
     position: absolute;
@@ -182,6 +198,7 @@ body {
     left: 50%;
     width: 300px;
     height: 300px;
+    padding-top: 80px;
     background: var(--loginBox);
     border-radius: 50px;
     text-align: center;
@@ -191,27 +208,45 @@ body {
     font-weight: 700;
     font-size: 30px;
 }
+.popup p{
+    color: var(--grey);
+}
+.popup div{
+    border-radius: 50px;
+    background: var(--almostWhite);
+    color: var(--loginBox);
+    padding: 10px 15px;
+    margin-top: 10px;
+    font-size: 14px;
+    width: 200px;
+    margin: 10px 50px;
+    cursor: pointer;
+}
+.popup button:hover{
+    background-color: var(--background);
+    color: var(--almostWhite);
+}
 #uno{
-    left: 74%;
-    top: 40%;
+    left: 79%;
+    top: 38%;
 }
 #dos{
-    left: 73%;
-    top: 43%;
+    left: 76%;
+    top: 45%;
 }
 #tres{
-    left: 30%;
-    top: 23%;
+    left: 51%;
+    top: 15%;
 }
 #qu{
     left: 67%;
-    top: -2%;
+    top: 4%;
 }
 #cin{
-    left: 75%;
-    top: -5%;
+    left: 69%;
+    top: 4%;
 }
 #sei{
-    left: 60%;
-    top: -10%;
+    left: 57%;
+    top: 5%;
 }

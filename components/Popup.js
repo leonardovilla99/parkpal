@@ -2,10 +2,11 @@ import React from "react";
 
 export default function Popup(props){
     return(props.trigger)?(
-        <button className="popupExt" onClick={() => {props.setTrigger(false)}}>
-            <button disabled={true} className="popup">
+        <div className="popupExt" >
+            <div className="popup">
                 {props.children}
-            </button>
-        </button>
+            </div>
+            <button onClick={() => {props.setTrigger(false)}} className="closeB">CLOSE</button>
+        </div>
     ) : "";
 }
