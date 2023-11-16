@@ -9,6 +9,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 // Component
 import supabase from "../supabase"
 
+// Theme for Material-UI components
 const theme = createTheme({
     palette: {
         mode: 'dark',
@@ -21,7 +22,9 @@ const theme = createTheme({
     },
 });
 
+// Register component
 export default function Register(){
+    // State variables for email, password, error message, confirmed password, loading status, and success status
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setErr] = useState('')
@@ -29,10 +32,13 @@ export default function Register(){
     const [loading, setLoading] = useState(false);
     const [success, setSuccess] = useState(false);
 
+    // Function to handle user registration
     const register = async () => {
+       // Check if the entered password and confirmed password match
         if(password == confPassword){
             try {
                 setLoading(true)
+                // Use supabase to sign up the user with email and password
                 let { data, error } = await supabase.auth.signUp({
                     email: email,
                     password: password
@@ -55,6 +61,7 @@ export default function Register(){
         } 
     }
 
+    // JSX structure for the Register component
     return(
         <div className="blockInside">
             <div className="loginBox">
