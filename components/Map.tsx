@@ -7,14 +7,17 @@ import { Link } from 'react-router-dom'
 import supabase from "@/supabase"
 import Popup from "@/components/Popup"
 
-
+// Map component
 export default function Map(){
+    // State variables for managing the popup, its visibility, and swap status
     const [popup,setPopup] = useState(-1)
     const [popOpen,setPopOpen] = useState(false)
     const [swap,setSwap] = useState("")
 
+    // Mock data for available parking spots
     let availableSpot = [32,65,43,65,2,76]
 
+    // Function to handle authentication state change
     const onAuthStateChange =async () => {
         try {
             let { error } = await supabase.auth.signOut()
@@ -25,12 +28,14 @@ export default function Map(){
         }
     }
 
+    // Function to handle button click and open the popup
     const handleButtonClick = (value: React.SetStateAction<number>) => {
         // Use the 'value' parameter to update state or perform other actions
         setPopup(value);
         setPopOpen(true)
     }
 
+    // Function to simulate a parking spot swap request
     const swapSpot = () => {
         // Use the 'value' parameter to update state or perform other actions
         setSwap('Request Sent!')
@@ -39,6 +44,7 @@ export default function Map(){
         }, 2500);
     }
 
+    // Render the map component
     return(
         <div className="map">
             <Popup trigger={popOpen} setTrigger={setPopOpen}>

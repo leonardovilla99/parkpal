@@ -1,14 +1,17 @@
+/* Set base styles using Tailwind CSS */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Define custom color variables in the root element */
 :root {
   --background: #04162F;
-  --loginBox:#112D54;
+  --loginBox: #112D54;
   --almostWhite: #D9D9D9;
   --grey: #a9a6a6;
 }
 
+/* Dark mode styles using prefers-color-scheme media query */
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -17,245 +20,301 @@
   }
 }
 
+/* Body styles */
 body {
-    background: var(--background);
-    justify-content: center;
-    align-items: center;
+  background: var(--background);
+  justify-content: center;
+  align-items: center;
 }
-.blockInside{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.loginBox{
-    width: 400px;
-    height: 515px;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    border-radius: 50px;
-    background: var(--loginBox);
-    box-shadow: 0px 20px 20px 20px rgba(0, 0, 0, 0.10);
-}
-.loginInside{
-    width: 220px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-.logoLogin{
-    width: 90px;
-    height: 100px;
-    margin-bottom: 10px;
-}
-.buttonLogin{
-    width: 220px;
-    height: 50px;
-    border-radius: 50px;
-    margin-top: 30px !important;
-    background: var(--almostWhite);
-    color: var(--loginBox);
-}
-.buttonLogin:hover{
-    background-color: var(--background);
-    color: var(--almostWhite);
-}
-.textLogin{
-    color: var(--grey);
-    font-size:x-small;
-    margin-top: 10px;
-    text-align: center;
-}
-.textLogin a{
-    text-decoration: underline;
-    color: var(--almostWhite);
-}
-.error {
-    color: var(--almostWhite);
-    font-size: 12px;
-    text-align: center;
-    font-weight: 700;
-    margin-top: 10px;
-}
-.map{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background: url("../public/map.jpg") no-repeat center center fixed;
-    background-size: cover;
-}
-.mapBox{
-    height: 90%;
-    width: 400px;
-    position: absolute;
-    top: 5%;
-    left: 30px;
-    border-radius: 50px;
-    background: var(--loginBox);
-    box-shadow: 0px 20px 20px 20px rgba(0, 0, 0, 0.50);
-}
-.parkingTitle{
-    background-color: var(--almostWhite);
-    width: 90%;
-    height: 70px;
-    border-radius: 50px;
-    margin: 5%;
-}
-.parkingTitle h2{
-    text-align: center;
-    position: relative;
-    top: 30%;
-    font-weight:900;
-    color: var(--loginBox);
-}
-.parkingContainer{
-    display: flex;
-    height: fit-content;
-    padding: 0 5% 15px 5%;
-    margin: 0 5%;
-    border-color: var(--almostWhite);
-    border-bottom-style: solid;
-    border-bottom-width: 2px;
-    margin-top:20px;
-}
-.parkingText{
-    width: 70%;
-}
-.parkingText h3{
-    font-size: 24px;
-    font-weight: 900;
-    color: var(--almostWhite);
-}
-.parkingText p{
-    color: var(--grey);
-    font-size: 13px;
-}
-.numberParking{
-    width: 30%;
-    background-color: var(--almostWhite);
-    border-radius: 50px;
-    text-align: center;
-    
-}
-.numberParking p{
-    color: var(--loginBox);
-    position: relative;
-    top: 30%;
-    font-weight: 700;
-}
-#lastContainer{
-    border: none;
-}
-.pin{
-    width: 40px;
-    height: 40px;
-    background-color: var(--loginBox);
-    border-radius: 50% 50% 50% 0;
-    transform: rotate(-45deg);
-    position: relative;
-    text-align: center;
-    padding-top: 8px;
-    color: var(--almostWhite);
-    font-weight: 500;
-    box-shadow: 0px 2px 2px 3px rgba(0, 0, 0, 0.20);
-}
-.pin p{
-    transform: rotate(45deg);
-    margin-left: -4px;
-    margin-top: -6px;
-    margin-right: -4px;
 
+/* Container for flex display */
+.blockInside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+/* Styles for the login box */
+.loginBox {
+  width: 400px;
+  height: 515px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border-radius: 50px;
+  background: var(--loginBox);
+  box-shadow: 0px 20px 20px 20px rgba(0, 0, 0, 0.10);
+}
+
+/* Styles for the content inside the login box */
+.loginInside {
+  width: 220px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Logo styles within the login box */
+.logoLogin {
+  width: 90px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+/* Button styles for the login */
+.buttonLogin {
+  width: 220px;
+  height: 50px;
+  border-radius: 50px;
+  margin-top: 30px !important;
+  background: var(--almostWhite);
+  color: var(--loginBox);
+}
+
+.buttonLogin:hover {
+  background-color: var(--background);
+  color: var(--almostWhite);
+}
+
+/* Text styles for login information */
+.textLogin {
+  color: var(--grey);
+  font-size: x-small;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.textLogin a {
+  text-decoration: underline;
+  color: var(--almostWhite);
+}
+
+/* Error message styles */
+.error {
+  color: var(--almostWhite);
+  font-size: 12px;
+  text-align: center;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+/* Map styles */
+.map {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url("../public/map.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Styles for the map box */
+.mapBox {
+  height: 90%;
+  width: 400px;
+  position: absolute;
+  top: 5%;
+  left: 30px;
+  border-radius: 50px;
+  background: var(--loginBox);
+  box-shadow: 0px 20px 20px 20px rgba(0, 0, 0, 0.50);
+}
+
+/* Styles for the parking title */
+.parkingTitle {
+  background-color: var(--almostWhite);
+  width: 90%;
+  height: 70px;
+  border-radius: 50px;
+  margin: 5%;
+}
+
+.parkingTitle h2 {
+  text-align: center;
+  position: relative;
+  top: 30%;
+  font-weight: 900;
+  color: var(--loginBox);
+}
+
+/* Styles for the parking container */
+.parkingContainer {
+  display: flex;
+  height: fit-content;
+  padding: 0 5% 15px 5%;
+  margin: 0 5%;
+  border-color: var(--almostWhite);
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  margin-top: 20px;
+}
+
+/* Styles for the parking text */
+.parkingText {
+  width: 70%;
+}
+
+.parkingText h3 {
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--almostWhite);
+}
+
+.parkingText p {
+  color: var(--grey);
+  font-size: 13px;
+}
+
+/* Styles for the number of parking spots */
+.numberParking {
+  width: 30%;
+  background-color: var(--almostWhite);
+  border-radius: 50px;
+  text-align: center;
+}
+
+.numberParking p {
+  color: var(--loginBox);
+  position: relative;
+  top: 30%;
+  font-weight: 700;
+}
+
+/* Styles for the last container */
+#lastContainer {
+  border: none;
+}
+
+/* Styles for the pin marker */
+.pin {
+  width: 40px;
+  height: 40px;
+  background-color: var(--loginBox);
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  position: relative;
+  text-align: center;
+  padding-top: 8px;
+  color: var(--almostWhite);
+  font-weight: 500;
+  box-shadow: 0px 2px 2px 3px rgba(0, 0, 0, 0.20);
+}
+
+.pin p {
+  transform: rotate(45deg);
+  margin-left: -4px;
+  margin-top: -6px;
+  margin-right: -4px;
+}
+
+/* Styles for the external popup */
 .popupExt {
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.50);
-    position: fixed;
-    z-index: 99;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.50);
+  position: fixed;
+  z-index: 99;
 }
-.closeB{
-    position: absolute;
-    display: block;
-    justify-content: center;
-    top: 65%;
-    transform: translateY(-50%);
-    left: 50%;
-    width: 300px;
-    color: var(--almostWhite);
-    text-decoration: underline;
+
+/* Styles for the close button in the popup */
+.closeB {
+  position: absolute;
+  display: block;
+  justify-content: center;
+  top: 65%;
+  transform: translateY(-50%);
+  left: 50%;
+  width: 300px;
+  color: var(--almostWhite);
+  text-decoration: underline;
 }
+
+/* Styles for the popup container */
 .popup {
-    position: absolute;
-    display: block;
-    justify-content: center;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    left: 50%;
-    width: 300px;
-    height: 300px;
-    padding-top: 80px;
-    background: var(--loginBox);
-    border-radius: 50px;
-    text-align: center;
+  position: absolute;
+  display: block;
+  justify-content: center;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  padding-top: 80px;
+  background: var(--loginBox);
+  border-radius: 50px;
+  text-align: center;
 }
-.popup h1{
-    color: white;
-    font-weight: 700;
-    font-size: 30px;
+
+.popup h1 {
+  color: white;
+  font-weight: 700;
+  font-size: 30px;
 }
-.popup p{
-    color: var(--grey);
+
+.popup p {
+  color: var(--grey);
 }
-.popup div{
-    border-radius: 50px;
-    background: var(--almostWhite);
-    color: var(--loginBox);
-    padding: 10px 15px;
-    margin-top: 10px;
-    font-size: 14px;
-    width: 200px;
-    margin: 10px 50px;
-    cursor: pointer;
+
+/* Styles for buttons inside the popup */
+.popup div {
+  border-radius: 50px;
+  background: var(--almostWhite);
+  color: var(--loginBox);
+  padding: 10px 15px;
+  margin-top: 10px;
+  font-size: 14px;
+  width: 200px;
+  margin: 10px 50px;
+  cursor: pointer;
 }
-.popup button:hover{
-    background-color: var(--background);
-    color: var(--almostWhite);
+
+.popup button:hover {
+  background-color: var(--background);
+  color: var(--almostWhite);
 }
-.logout{
-    padding: 10px 15px;
-    background-color: white;
-    border-radius: 50px;
-    position: absolute;
-    right: 40px;
-    top: 40px;
-    box-shadow: 0px 5px 5px 10px rgba(0, 0, 0, 0.20);
+
+/* Styles for the logout button */
+.logout {
+  padding: 10px 15px;
+  background-color: white;
+  border-radius: 50px;
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  box-shadow: 0px 5px 5px 10px rgba(0, 0, 0, 0.20);
 }
-#uno{
-    left: 79%;
-    top: 38%;
+
+/* Position styles for pin markers on the map */
+#uno {
+  left: 79%;
+  top: 38%;
 }
-#dos{
-    left: 76%;
-    top: 45%;
+
+#dos {
+  left: 76%;
+  top: 45%;
 }
-#tres{
-    left: 51%;
-    top: 15%;
+
+#tres {
+  left: 51%;
+  top: 15%;
 }
-#qu{
-    left: 67%;
-    top: 4%;
+
+#qu {
+  left: 67%;
+  top: 4%;
 }
-#cin{
-    left: 69%;
-    top: 4%;
+
+#cin {
+  left: 69%;
+  top: 4%;
 }
-#sei{
-    left: 57%;
-    top: 5%;
+
+#sei {
+  left: 57%;
+  top: 5%;
 }
