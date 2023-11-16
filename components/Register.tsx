@@ -100,6 +100,7 @@ export default function Register(){
                             <TextField
                             id="standard-multiline-flexible"
                             label= "Password"
+                            type ="password"
                             variant="standard"
                             color= "primary"
                             value= {password}
@@ -120,6 +121,7 @@ export default function Register(){
                             <TextField
                             id="standard-multiline-flexible"
                             label= "Confirm password"
+                            type = "password"
                             variant="standard"
                             color= "primary"
                             value= {confPassword}
