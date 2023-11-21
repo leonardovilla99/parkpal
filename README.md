@@ -22,6 +22,8 @@ Unlike generic parking apps, ParkPal caters specifically to the needs of univers
 
 Don't let parking hassles disrupt your academic journey. Join the ParkPal community today and embrace a new era of hassle-free, efficient, and cost-free parking on campus. Download the app now and redefine your university commuting experience!
 
+![logo](https://github.com/leonardovilla99/parkpal/assets/47520664/80420fc1-f0f0-46da-9a75-e15d2d37df50)
+
 ## Getting Started
 
 First, run the development server:
