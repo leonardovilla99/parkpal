@@ -1,3 +1,5 @@
+![alt text]([http://url/to/img.png](https://github.com/leonardovilla99/parkpal/blob/main/public/ParkPal-3.jpg))
+
 # ParkPal
 
 ParkPal is a game-changing mobile application crafted for university students, providing a revolutionary solution to the perennial parking woes on campus. Designed with the student lifestyle in mind, this app offers a seamless platform for sharing parking spots among friends and peers, promising quick, efficient, and cost-free parking experiences.
