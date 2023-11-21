@@ -1,4 +1,4 @@
-![Alt text](image https://github.com/leonardovilla99/parkpal/blob/main/public/ParkPal-3.jpg)
+![ParkPal-3](https://github.com/leonardovilla99/parkpal/assets/47520664/22425945-b45d-4a12-b653-80fe7a464ae8)
 
 # ParkPal
 
