@@ -1,4 +1,24 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ParkPal
+
+ParkPal is a game-changing mobile application crafted for university students, providing a revolutionary solution to the perennial parking woes on campus. Designed with the student lifestyle in mind, this app offers a seamless platform for sharing parking spots among friends and peers, promising quick, efficient, and cost-free parking experiences.
+
+## Key Features
+
+- **Quick Parking:** Bid farewell to the frustration of circling campus for an elusive parking spot. ParkPal empowers you to find available spaces swiftly, ensuring you're always on time for classes and events.
+
+- **Efficiency at its Core:** Navigate the app's user-friendly interface effortlessly, facilitating the hassle-free sharing of parking spaces. ParkPal streamlines the process, making your campus commute stress-free.
+
+- **Cost-Free Convenience:** Say goodbye to parking fees. ParkPal is committed to providing a cost-free solution, allowing you to allocate your budget to more important aspects of student life.
+
+- **Punctuality Matters:** Recognizing the importance of timeliness in a student's life, ParkPal ensures you can secure parking quickly, keeping you punctual for all your commitments.
+
+- **Traffic Reduction:** By efficiently distributing parking spaces, ParkPal plays a role in reducing traffic congestion on university campuses, contributing to a smoother and more enjoyable commuting experience for everyone.
+
+## Experience the Difference
+
+Unlike generic parking apps, ParkPal caters specifically to the needs of university students. Our innovative approach minimizes altercations between users, fostering a harmonious community dedicated to making campus life more convenient and enjoyable.
+
+Don't let parking hassles disrupt your academic journey. Join the ParkPal community today and embrace a new era of hassle-free, efficient, and cost-free parking on campus. Download the app now and redefine your university commuting experience!
 
 ## Getting Started
 
@@ -16,10 +36,6 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
@@ -28,9 +44,3 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
