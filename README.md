@@ -1,4 +1,4 @@
-![alt text]([http://url/to/img.png](https://github.com/leonardovilla99/parkpal/blob/main/public/ParkPal-3.jpg))
+![Alt text]([https://github.com/leonardovilla99/parkpal/blob/main/public/ParkPal-3.jpg])
 
 # ParkPal
 
